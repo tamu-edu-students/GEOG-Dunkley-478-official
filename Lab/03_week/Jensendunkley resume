@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Page Title</title>
+</head>
+<body>
+<div>
+<h1 style="background-color:LightGray;"><center>Jensen Dunkley</center></h1>
+<P><center>(832)-797-2760 | The Woodlands, TX | Jensendunkley1@tamu.edu<center></p>
+</div> 
+
+<div>
+<h2 style="color:DarkBlue;">EDUCATION</h2>
+<p>Texas A&M University, College of Arts & Sciences</p>
+<p><em>Bachelor of Science in Environmental Studies, Minor in Geographical Informations Systems & Technologies GPA: 3.76/4.00</em></p>
+
+<p>BYU Hawaii, College of Sciences</p>
+<p><em>GPA: 3.9/4.00</em></p>
+
+</div>
+
+<div>
+
+<h2 style="color:DarkBlue;">PROFESSIONAL EXPERIENCE</h2>
+<p><strong>Tiff's Treats</strong></p>
+<p><em>Manager</em></p>
+   <ul>
+   <li>Routing delivery vehicles</li>
+   <li>In charge of staff and opperations</li>
+   <li>Accountable for inventory</li> 
+   </ul>
+<p><strong>La Gabriella Coffee Shop & Pastries</strong></p>
+<p><em>Barista</em></p>
+   <ul>
+   <li> Operated cash register</li>
+   <li> Assisted in food preparation</li>
+   <li> Maintained health standards</li>
+   </ul>
+<p><strong>IGI Playground</strong></p> 
+<p><em>Manager</em></p>
+   <ul>
+   <li> Scheduling employees</li>
+   <li> Coordinated Events</li>
+   <li> Assisted in food preparation</li>
+   </ul>
+ <p><strong>Eportfolio link below</strong></p>
+ <a href="url">https://sites.google.com/tamu.edu/jensen-dunkley/academics/geog-352?authuser=0</a>
+ </div>
+ 
+ <div>
+ <h2 style="color:DarkBlue;">LEADERSHIP & INVOLVEMENT</h2>
+<p><strong>Aggieland Humane Society</strong></p>
+<p><em>Volunteer/Foster</em></p>
+	<ul>
+    <li>Provide housing for dogs during adoption process</li>
+    <li>Cleaned animal kennels</li>
+    <li>Walked dogs</li> 
+    </ul>
+  </div>
+  <div>
+<h2 style="color:DarkBlue;">SKILLS, ACTIVITIES & INTERESTS</h2>
+<p><strong>Certifications & Training:</strong> Foundations of Global Navigation Satellites Systems (GNSS), BP’s Geodetic Awareness Certificate, GNSS Positioning: Survey Planning and Data Acquisition Certificate, and Data Engineering Micro Certificate</p>
+<p><strong>Technical Skills:</strong> Python, C++, AutoCAD, ArcGIS Pro, ENVI, MS Office</p>
+<p><strong>Activities:</strong> Intramural Sports</p>
+<p><strong>Interests:</strong> Surfing, Painting, Piano, Reading</p>
+</div>
+<div>
+<p style="color:DarkSlateBlue;"><strong>Work Example</strong></p>
+<img src="https://lh5.googleusercontent.com/-sFuDyrfqVp6QSUyl0nPACk3z9wnqeYbxkxEXznMTEuZNxP-ADj14E_fWdtA-AmVZaRYzNZUurG8erIg9STMNntczrO-n6QbspVjeGCKKlCQf4q3DuIRF_7am8Z5GBF7=w1280" alt="Drainage Analysis">
+</body>
+</html>
