@@ -1,0 +1,106 @@
+index.hmtl 
+<DOCTYPE html> 
+    <html> 
+        <script scr='data.js'></script>
+        <script scr='script.js'></script> 
+    
+        <head> 
+            <title> Lab 4 </title> 
+        </head> 
+
+        <body> 
+            <script> 
+            function Run()
+     
+    
+
+        var theJSON =  
+{
+    "data": 
+    {"pointId": 1, "lat": 30.61586, "lon": -96.35557 },
+        {"pointId": 2, "lat": 30.61724, "lon": -96.3368 },
+        {"pointId": 3, "lat": 30.60649, "lon": -96.35613},
+        {"pointId": 4, "lat": 30.60718, "lon": -96.33817},
+        {"pointId": 5, "lat": 30.61479, "lon": -96.34729}
+
+}
+
+    var latitudelist=[30.61586, 30.61724, 30.60649, 30.60718, 30.61479];
+var longitudelist=[-96.35557,-96.3368, -96.35613, -96.33817, -96.34729];
+        
+var centerPoint= [30.60649,-96.35613]
+
+var midLattitude=(30.612312)
+var midLongitude=(-96.346792)
+var pointsList = theJSON.data;
+pointsList.forEach(
+element =>
+{
+    latitudeList.push(element.lat)
+    longitudeList.push(element.lon)
+}
+)
+latitudeList.forEach((number,index)
+
+=>midLattitude+=number
+)
+longitudeList.forEach((number,index)
+=>midLongitude+=number
+)
+ {
+    let latlen=latitudelist.length; 
+    midLattitude=midLattitude/latlen
+    centerPoint.push(midLattitude)
+
+let lonlen = longitudelist.length;
+    midLongitude = midLongitude/latlen
+    centerpoint.push(midLongitude)
+
+    return centerpoint;
+            
+    vartopleftpoint;
+    var pointsList = theJSON.data;
+    var centerPoint =findcenterpoint(); 
+
+    pointslist.forEach(
+{
+    if(topleftpoint ==null)
+    {
+        topleftpoint= element
+    }
+}
+
+    )
+
+{
+    if (element.lat > topleftpoint.lat && element.lon < topleftpoint.long)
+    {
+        topleftpoint = element 
+    
+    }
+}
+
+return topleftpoint
+var topleftpoint= findtopleft (coordinates,lat0,long0);
+var toprightpoint= findtopright (coordinates,lat0,long0);
+var bottomleftpoint= findbottomleft( coordinates,lat0,long0);
+var bottomrightpoint= findbottomright(coordinates,lat0,long0)
+
+
+Var boundingbox = 
+{
+    topleft: topleftpoint 
+    topright: toprightpoint, 
+    bottomleft: bottomleftpoint, 
+    bottomright: bottomrightpoint, 
+
+}
+    console.log("bounding box computed for Jensendunkley1@tamu.edu");
+    console.log(boundingbox);
+ }           
+      
+            </script>
+
+            <input type='button' value='click me'></input> 
+        </body> 
+    </html> 
