@@ -1,0 +1,98 @@
+function Run() {
+    console.log(theJSON);
+
+    coordinates = theJSON.data;
+
+    var lat = getFields(coordinates, "lat");
+    var long = getFields(coordinates, "lon");
+
+    console.log(lat);
+    console.log(long);
+
+    var lat0 = (Math.max(...lat) + Math.min(...lat)) / 2;
+    var long0 = (Math.max(...long) + Math.min(...long)) / 2;
+
+    console.log(lat0);
+    console.log(long0);
+
+    var topleftpoint = findTopLeft(coordinates, lat0, long0);
+    var toprightpoint = findTopRight(coordinates, lat0, long0);
+    var bottomleftpoint = findBottomLeft(coordinates, lat0, long0);
+    var bottomrightpoint = findBottomRight(coordinates, lat0, long0);
+    
+
+    var boundingBox= 
+    {
+        topLeft: topleftpoint,
+        topRight: toprightpoint,
+        bottomLeft: bottomleftpoint,
+        bottomRight: bottomrightpoint,
+    }
+
+    console.log("Bounding box computed for jensendunkley1@tamu.edu: ");
+    console.log(boundingBox);
+    
+    function getFields(input, field) {
+        var output = [];
+        for (var i = 0; i < input.length; ++i) {
+            output.push(input[i][field]);
+        }
+        return output;
+    }
+
+    function findTopLeft(AllPoint, Lat0, long0) {
+        var topleft;
+        var dist;
+        var dist_tl = 0;
+        var ang;
+        var lat0 = Lat0;
+        var long0 = long0;
+
+        AllPoint.forEach(element => {
+            dist = Math.sqrt(Math.pow((element.lat - lat0), 2) + Math.pow((element.long - long0), 2));
+            ang = 180 * Math.atan2((element.long - long0), (element.lat - lat0)) / Math.PI;
+            console.log(ang);
+            console.log(dist);
+
+            if (90 < ang && ang <= 180) {
+                if (dist_tl < dist) {
+                    topleft = element;
+                    dist_tl = dist;
+                }
+            }
+        });
+        return topleft;
+    }
+
+    function findTopRight(AllPoint, lat0, long0) {
+        var topright;
+        var dist;
+        var dist_tr = 0;
+        var ang;
+        var lat0 = lat0;
+        var long0 = long0;
+
+        AllPoint.forEach(element => {
+            dist = Math.sqrt(Math.pow((element.lat - lat0), 2) + Math.pow((element.long - long0), 2));
+            ang = 180 * Math.atan2((element.long - long0), (element.lat - lat0)) / Math.PI;
+            console.log(ang);
+            console.log(dist);
+
+            if (-90 < ang && ang <= 0) {
+                if (dist_tr < dist) {
+                    topright = element;
+                    dist_tr = dist;
+                }
+            }
+        });
+        return topright;
+    }
+
+    function findBottomLeft(AllPoint, lat0, long0) {
+       
+    }
+
+    function findBottomRight(AllPoint, lat0, long0) {
+      
+    }
+}
