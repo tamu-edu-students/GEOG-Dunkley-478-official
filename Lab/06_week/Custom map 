@@ -1,0 +1,95 @@
+<!DOCKTYPE html> 
+<html> 
+    <head> 
+        <title>Jensen Dunkley TAMU Map</title> 
+        <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.3/dist/leaflet.css"
+            integrity="sha256-kLaT2GOSpHechhsozzB+flnD+zUyjE2LlfWPgU04xyI="
+            crossorigin=""/>
+        <script src="https://unpkg.com/leaflet@1.9.3/dist/leaflet.js"
+            integrity="sha256-WBkoXOwTeyKclOHuWtc+i2uENFpDZ9YPdf5Hf+D7ewM="
+            crossorigin=""></script>
+        <script>
+            type= "text/javascript"
+            src=
+        </script>
+        <div id="mapid"></div>
+        <style type="text/css">
+            #mapid {
+                height: 500px;
+                width: 800px;
+            }
+        .info{
+            padding:6px 8px;
+            font: 14px/16px Times New Roman, Arial;
+            background: white; 
+            background: rgba(255,255,255,0.8);
+            box-shadow: 0 0 15px rgba(0,0,0,0.2);
+            border-radius: 5px; 
+        }
+        .info h4 {
+            margin: 0 0 5px;
+            color: #777;
+        }
+        </style>
+        <script src=tamu.data.js></script>
+    </head>
+    <body>
+        <script> 
+            var map = L.map('mapid').setView([30.6188,-96.3365],4);
+            var map = L.map('map').setView([37.8, -96], 4);
+
+            var tiles = L.tileLayer('https://tile.openstreetmap.org/{z}/{x}/{y}.png', {
+             maxZoom: 19,
+             attribution: '&copy; <a href="http://www.openstreetmap.org/copyright">OpenStreetMap</a>'
+            }).addTo(map);
+
+            var OMB = {
+                "type": "feature", "properties":{"Entries":7,"BldgAbbr": "OMB","BldgName": "Eller Oceanography & Meterology Building","number":"0043"},
+                "geomertry": {"type": "polygon", "coordinates":[[[-96.336958,30.617682],[-96.336769,30.617475],[-96.336735,30.617498],[-96.33671,30.61750],[-96.336671,30.617543]]]}      
+            };
+            var myStyle = {
+                "color": "#ff7800",
+                "weight": 5, 
+                "opacity": 0.65
+
+            };
+        function highlightFeature(e) {
+            var layer = e.target;
+            layer.SetStyle({
+                weight; 5,
+                color: '#555',
+                dashArray :'',
+                fillOpacity:0.7
+
+            });
+            function resetHighLight(e) {
+                OMB.resetStyle(e.target);
+            
+            }
+            var OMB;
+
+            function zoomtoFeature(e) {
+                map.fitbounds(e.target.getbounds);
+    
+            }
+            function onEachFeature(feature, layer) {
+                layer.on({
+
+                });
+
+            }
+            var info= L.control();
+            info.onAdd = function (map) {
+        
+            }
+            function highlightfeature {
+                info.update(layer.feature.properties);
+
+            }
+
+
+        }
+        
+        </script>
+
+    </body>
